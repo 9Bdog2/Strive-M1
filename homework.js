@@ -36,6 +36,16 @@ Write a function "crazyDiff" that computes the absolute difference between a giv
 It should return triple their absolute difference if the given number is greater than 19.
 */
 
+
+function crazyDiff(x){
+    if(x>19){
+        return (x-19)*3
+    }else{
+        return x-19
+    }
+}
+console.log(crazyDiff(20))
+
 /* EXERCISE 4
 Write a function "boundary" which accept an integer n and returns true if n is within 20 and 100 (included) or if it's equal to 400.
 */
