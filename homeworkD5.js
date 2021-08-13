@@ -63,7 +63,9 @@ Write a function "strivify" which accepts a string.
 It should add the word "Strive" in front of the given string, but if the given string already begins with "Strive", then it should just return the original string.
 */
 
-
+function strivify(word){
+    
+}
 
 /* EXERCISE 6
 Write a function "check3and7" which accepts a positive number and check if it is a multiple of 3 or a multiple of 7.
@@ -100,7 +102,9 @@ Write a function "cutString" to create a new string without the first and last c
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
 */
 
-/* WRITE YOUR CODE HERE */
+function giveMeRandom(n){
+
+}
 
 /* WHEN YOU ARE FINISHED
 Commit and push the code to your personal GitHub repository and share the link to your commit in Eduflow.
