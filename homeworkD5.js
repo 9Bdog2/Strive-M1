@@ -70,10 +70,14 @@ Write a function "check3and7" which accepts a positive number and check if it is
 HINT: Module Operator
 */
 
-function check3and7(){
-    
+function check3and7(x){
+    if (x>0 && x%3===0 || x%7===0) {
+        return "The number is a multiple of 3 or 7 "
+    }else{
+        return "The number is not a multiple of 3 or 7"
+    }
 }
-
+console.log(check3and7(-1))
 /* EXERCISE 7
 Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
 */
