@@ -39,7 +39,7 @@ It should return triple their absolute difference if the given number is greater
 
 function crazyDiff(x){
     if(x>19){
-        return (x-19)*3
+        return (x-19)*3             
     }else{
         return x-19
     }
@@ -50,21 +50,29 @@ console.log(crazyDiff(20))
 Write a function "boundary" which accept an integer n and returns true if n is within 20 and 100 (included) or if it's equal to 400.
 */
 
-/* WRITE YOUR CODE HERE */
-
+function boundary(n){
+    if(n>=20 && n<=100 || n===400){
+         return true
+    }else{
+        return false
+    }
+}
+console.log(boundary(30))
 /* EXERCISE 5
 Write a function "strivify" which accepts a string.
 It should add the word "Strive" in front of the given string, but if the given string already begins with "Strive", then it should just return the original string.
 */
 
-/* WRITE YOUR CODE HERE */
+
 
 /* EXERCISE 6
 Write a function "check3and7" which accepts a positive number and check if it is a multiple of 3 or a multiple of 7.
 HINT: Module Operator
 */
 
-/* WRITE YOUR CODE HERE */
+function check3and7(){
+    
+}
 
 /* EXERCISE 7
 Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
