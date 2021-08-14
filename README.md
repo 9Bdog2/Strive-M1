@@ -1,2 +1,2 @@
-# Strive-M1D5
+# Strive-M1
  Homework Repository
