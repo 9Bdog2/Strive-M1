@@ -181,7 +181,7 @@ if (x > y && x > z){
  5. Write code to find the average of two given integers. +
 */
 
-writeHeader("Extra Exercise 3")
+writeHeader("Extra Exercise 5")
 
 
 let average = (x + y) / 2
@@ -190,7 +190,7 @@ console.log("The average is " , average)
 /* 
   6. Find the longest of two given strings
 */
-writeHeader("Extra Exercise 3")
+writeHeader("Extra Exercise 6")
 
 let str1 = `aaaa`
 let str2 = `bb`
@@ -206,17 +206,25 @@ if (str1.length > str2.length) {
 /*
  7. Write code to check whether a value is an integer or not. ?
 */
-writeHeader("Extra Exercise 3")
+writeHeader("Extra Exercise 7")
 
 /* let checkInteger = true
 if (checkInteger ===  isInteger(x)) {
     console.log("The number is an Integer")
 } */
+console.log(typeof x)
+
+if (typeof x === `number`) {
+  console.log(true)
+}else{
+  console.log(false)
+}
 
 /*
  8. Write code to calculate the percentage (%) of a number. +
         Ex.: 20% of 400 is 80
 */
+writeHeader("Extra Exercise 8")
 
 x = 1234
 y = 1233
