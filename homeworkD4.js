@@ -180,7 +180,7 @@ es:
 */
 writeHeader("Extra Exercise 1")
 
-let numbers = [1, 3, 5 , "cat" ,"Dog", 10, 100] 
+let numbers = [2, 3, 5 , "cat" ,"Dog", 10, 100] 
 
 /* numbers.reverse()
 console.log(numbers) */
@@ -194,7 +194,7 @@ console.log(numbers)
 
 
 /* EXERCISE 2
-Write the code to get the maximum value in an array. ?
+Write the code to get the maximum value in an array. 
 */
 writeHeader("Extra Exercise 2")
 
@@ -208,15 +208,15 @@ for (let i = 0; i < numbers.length; i++) {
     
 }
 
-console.log(max) 
+console.log(`The maximun number is ${max}`) 
 
 
 /* EXERCISE 3
-Write the code to get the minimum value in an array. ?
+Write the code to get the minimum value in an array. 
 */
 writeHeader("Extra Exercise 3")
 
-let min = 2
+let min = numbers[0]
 
 for (let i = 0; i < numbers.length; i++) {
     if(min > numbers[i]){
@@ -224,19 +224,20 @@ for (let i = 0; i < numbers.length; i++) {
     }
     
 }
-
-console.log(min) 
+console.log(`The minimun number is ${min}`) 
 
 /* EXERCISE 4
 Write the code to get only even numerical values in an array.
 */
 writeHeader("Extra Exercise 4")
 
-/* for (let i = 0; i < numbers.length; i++) {
-    if()
-    
-} */
-
+let evenNumbers = [1, 4, 6, 5, "cat", "dog", {name : "Test"}]
+let acc = []
+for (let i = 0; i < evenNumbers.length; i++) {
+    if(typeof evenNumbers[i] === "number" && evenNumbers[i] % 2 === 0)
+    acc.push(evenNumbers[i])
+}
+console.log(acc)
 /* EXERCISE 5
 Write the code to delete even entries from an array.
 */
