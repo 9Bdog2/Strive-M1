@@ -84,22 +84,17 @@ if(totalShoppingCart <= 50){
 
 /* EXERCISE 7
 You are working on an e-commerce website. Today is Black Friday and everything has a 20% discount at the end of the purchase.
-Modify the previous answer inserting this information and, applying the same rules for the shipping cost, calculate the totalCost. ?
+Modify the previous answer inserting this information and, applying the same rules for the shipping cost, calculate the totalCost. 
 */
 writeHeader(" Exercise 7")
 
-let totalCost
-
-if(totalShoppingCart > 50){
-    totalCost = totalShoppingCart % 0.5
-    console.log(totalCost)
-    totalShoppingCart = totalCost + totalShoppingCart
-    console.log("\nThe total shipping cost is " + totalShoppingCart +","+ "shipping is free")
+if(totalShoppingCart <= 50){
+    totalShoppingCart += 10 
+    totalShoppingCart = totalShoppingCart -(totalShoppingCart * 0.2)
+    console.log(`\n The total shipping cost is ${totalShoppingCart}`)
 }else{
-    totalShoppingCart = totalShoppingCart + 10
-    totalCost = totalShoppingCart % 20
-    totalShoppingCart += totalCost
-    console.log("\nThe total shipping cost is " + totalShoppingCart )
+    totalShoppingCart = totalShoppingCart -(totalShoppingCart * 0.2)
+    console.log(`\n The total shipping cost is  ${totalShoppingCart} shipping is free` )
 }
 
 /* EXERCISE 8
