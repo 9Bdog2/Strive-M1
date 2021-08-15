@@ -50,6 +50,8 @@ function crazyDiff(num) {
     }
   }
 console.log(crazyDiff(20))
+// const crazyDiff = (num) =>
+//   num > 19 ? Math.abs(num - 19) * 3 : Math.abs(num - 19);
 
 /* EXERCISE 4
 Write a function "boundary" which accept an integer n and returns true if n is within 20 and 100 (included) or if it's equal to 400.
@@ -70,9 +72,15 @@ It should add the word "Strive" in front of the given string, but if the given s
 */
 writeHeader(" Exercise 5")
 
-function strivify(word){
-    
-}
+function strivify(str) {
+    if (str.startsWith("Strive")) {
+      return str;
+    } else {
+      return "Strive " + str;
+    }
+  }
+  //const strivify = (str) => (str.startsWith("Strive") ? str : "Strive " + str);
+  console.log(strivify("Strivers"));
 
 /* EXERCISE 6
 Write a function "check3and7" which accepts a positive number and check if it is a multiple of 3 or a multiple of 7.
