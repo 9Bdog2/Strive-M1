@@ -236,6 +236,9 @@ console.log("The percentage is",percentage , "%")
 /*
  9. Write code to check if a given number is even or odd. +
 */
+writeHeader("Extra Exercise 9")
+
+
 if (x%2 === 0) {
     console.log("The number" , x , "is even")
 }else{
