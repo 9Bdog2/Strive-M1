@@ -113,23 +113,36 @@ Write a function "upperFirst" to capitalize the first letter of each word of a g
 */
 writeHeader(" Exercise 8")
 
-/* WRITE YOUR CODE HERE */
+
+function upperFirst(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+  console.log(upperFirst("strivers"));
 
 /* EXERCISE 9
 Write a function "cutString" to create a new string without the first and last character of a given string.
 */
 writeHeader(" Exercise 9")
 
-/* WRITE YOUR CODE HERE */
+function cutString(str) {
+    return str.slice(1, str.length - 1);
+  }
+  console.log(cutString("hello"));
+  
 
 /* EXERCISE 10
 Write a function "giveMeRandom" which accepts a number n and returns an array containing n random numbers between 0 and 10.
 */
 writeHeader(" Exercise 10")
 
-function giveMeRandom(n){
-
-}
+function giveMeRandom(n) {
+    const arr = [];
+    for (let i = 0; i <= n; i++) {
+      arr.push(Math.floor(Math.random() * 10));
+    }
+    return arr;
+  }
+  console.log(giveMeRandom(5));
 
 /* WHEN YOU ARE FINISHED
 Commit and push the code to your personal GitHub repository and share the link to your commit in Eduflow.
