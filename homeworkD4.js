@@ -103,19 +103,18 @@ After you create the first car, clone it 5 times and change the licensePlate for
 */
 writeHeader(" Exercise 8")
 
-let car ={
+let car1 ={
     brand        : "BMW",
     model        : "z200",
-    licensePlate :  "AR30DZK"
+    licensePlate :  "AR31ZZZ"
 }
 
-let car1 ={...car,licensePlate:"AR31ZZZ"}
-let car2 ={...car,licensePlate:"AR32ZZZ"}
-let car3 ={...car,licensePlate:"AR33ZZZ"}
-let car4 ={...car,licensePlate:"AR34ZZZ"}
-let car5 ={...car,licensePlate:"AR35ZZZ"}
+let car2 ={...car1,licensePlate:"AR32ZZZ"}
+let car3 ={...car1,licensePlate:"AR33ZZZ"}
+let car4 ={...car1,licensePlate:"AR34ZZZ"}
+let car5 ={...car1,licensePlate:"AR35ZZZ"}
 
-console.log(car,car1,car2,car3,car4,car5)
+console.log(car1,car2,car3,car4,car5)
 
 
 /* EXERCISE 9
@@ -123,7 +122,7 @@ Create a new array called carsForRent containing all the cars from the previous 
 */
 writeHeader(" Exercise 9")
 
-let carsForRent =[car,car1,car2,car3,car4,car5]
+let carsForRent =[car1,car2,car3,car4,car5]
 console.log(carsForRent)
 
 /* EXERCISE 10
