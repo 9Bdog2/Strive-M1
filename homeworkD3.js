@@ -66,7 +66,7 @@ console.log(y)
 /* EXERCISE 7
 Create two variables: name1 and name2. name1 is equal to john, name2 is equal to John.
 Verify that name1 is different from name2. 
-Verify then, that name1 and name2 are equals if both lowercase (without changing the value of name2). ?
+Verify then, that name1 and name2 are equals if both lowercase (without changing the value of name2). 
 */
 
 writeHeader("Exercise 7")
@@ -192,11 +192,21 @@ console.log("The average is " , average)
 */
 writeHeader("Extra Exercise 3")
 
+let str1 = `aaaa`
+let str2 = `bb`
+
+if (str1.length > str2.length) {
+  console.log(`${str1} is longer`)
+}else{
+  console.log(`${str2} is longer`)
+
+}
 
 
 /*
  7. Write code to check whether a value is an integer or not. ?
 */
+writeHeader("Extra Exercise 3")
 
 /* let checkInteger = true
 if (checkInteger ===  isInteger(x)) {
