@@ -243,6 +243,13 @@ Write the code to delete even entries from an array.
 */
 writeHeader("Extra Exercise 5")
 
+for (let i = 0; i < evenNumbers.length; i++) {
+    if(typeof evenNumbers[i] === "number" && evenNumbers[i] % 2 === 0)
+    evenNumbers.splice(i)
+}
+console.log(evenNumbers)
+
+
 /* WRITE YOUR CODE HERE */
 
 /* EXERCISE 6
