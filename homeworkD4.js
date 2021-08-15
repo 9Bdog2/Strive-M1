@@ -101,30 +101,19 @@ if(totalShoppingCart <= 50){
 Create an object representing a car with properties like brand, model, licensePlate.
 After you create the first car, clone it 5 times and change the licensePlate for each cloned car without affecting the original one.
 */
-writeHeader(" Exercise 9")
+writeHeader(" Exercise 8")
 
 let car ={
     brand        : "BMW",
     model        : "z200",
     licensePlate :  "AR30DZK"
 }
-let car1 ={}
-let car2 ={}
-let car3 ={}
-let car4 ={}
-let car5 ={}
 
-Object.assign(car1,car)
-Object.assign(car2,car)
-Object.assign(car3,car)
-Object.assign(car4,car)
-Object.assign(car5,car)
-
-car1.licensePlate = "AR31ZZZ"
-car2.licensePlate = "AR32ZZZ"
-car3.licensePlate = "AR33ZZZ"
-car4.licensePlate = "AR34ZZZ"
-car5.licensePlate = "AR35ZZZ"
+let car1 ={...car,licensePlate:"AR31ZZZ"}
+let car2 ={...car,licensePlate:"AR32ZZZ"}
+let car3 ={...car,licensePlate:"AR33ZZZ"}
+let car4 ={...car,licensePlate:"AR34ZZZ"}
+let car5 ={...car,licensePlate:"AR35ZZZ"}
 
 console.log(car,car1,car2,car3,car4,car5)
 
