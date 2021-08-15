@@ -137,11 +137,11 @@ console.log(carsForRent)
 
 
 /* EXERCISE 11
-Print in the console the TYPES of the car variable, of its licensePlate and of the its brand properties.  ?
+Print in the console the TYPES of the car variable, of its licensePlate and of the its brand properties.  
 */
 writeHeader(" Exercise 11")
 
-console.log(carsForRent.brand, carsForRent.licensePlate )
+console.log(car1.brand, car1.licensePlate ,car1.model)
 
 /* EXERCISE 12
 Create a new array called carsForSale and insert 3 cars in it.
@@ -149,16 +149,13 @@ Store in a variable totalCars the number of cars present in both carsForSale and
 */
 writeHeader(" Exercise 12")
 
-let carsForSale = []
+let carsForSale = [car1,car5,car2]
 
-carsForSale.push("BMW")
-carsForSale.push("Ford")
-carsForSale.push("Audi")
-console.log(carsForSale)
+let totalCars = {
+    carsForSale: carsForSale.length,
+    carsForRent: carsForRent.length,
+}
 
-let totalCars = []
-
-totalCars = carsForSale.concat(carsForRent)
 console.log(totalCars)
 
 
@@ -167,7 +164,10 @@ Print in the console the data from each car in the carsForSale array.
 */
 writeHeader(" Exercise 13")
 
-console.log(carsForSale)
+console.log(carsForSale[0].licensePlate)
+console.log(carsForSale[1].licensePlate)
+console.log(carsForSale[2].licensePlate)
+
 
 /* 
 ----------------Extra Questions--------------
@@ -180,10 +180,18 @@ es:
 */
 writeHeader("Extra Exercise 1")
 
-let numbers = [1, 3, 5 , -1, "cat" ,"Dog"] 
+let numbers = [1, 3, 5 , "cat" ,"Dog", 10, 100] 
 
-numbers.reverse()
+/* numbers.reverse()
+console.log(numbers) */
+
+for(let i = 0; i < numbers.length / 2; i++){
+    let temp = numbers[i]
+    numbers[i] = numbers[numbers.length - i - 1]
+    numbers[numbers.length - i - 1] = temp
+}
 console.log(numbers)
+
 
 /* EXERCISE 2
 Write the code to get the maximum value in an array. ?
