@@ -95,13 +95,18 @@ function check3and7(x){
         return "The number is not a multiple of 3 or 7"
     }
 }
+// const check3and7 = (n) =>
+//   n >= 0 && (n % 3 === 0 || n % 7 === 0) ? true : false;
 console.log(check3and7(-1))
 /* EXERCISE 7
 Write a function "reverseString" to programmatically reverse a given string (es.: Strive => evirtS).
 */
 writeHeader(" Exercise 7")
 
-/* WRITE YOUR CODE HERE */
+function reverseString(str) {
+    return str.split("").reverse("").join("");
+  }
+  //const reverseString = (str) => str.split("").reverse("").join("");
 
 /* EXERCISE 8
 Write a function "upperFirst" to capitalize the first letter of each word of a given string passed as a parameter.
