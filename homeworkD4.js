@@ -265,6 +265,22 @@ Write the code to remove all the vowels from a string.
 */
 writeHeader("Extra Exercise 6")
 
+let str = "Hello Strive World"
+let result =""
+for (let i = 0; i < str.length; i++) {
+    switch(str[i]){
+        case "a":
+        case "e":
+        case "i":
+        case "o":
+        case "u":
+        break;
+        default:
+        result += str[i]
+    }
+}
+console.log(result)
+
 /* WRITE YOUR CODE HERE */
 
 /* EXERCISE 7
@@ -272,13 +288,25 @@ Write the code to increase all the numeric values in a array by 1.
 */
 writeHeader("Extra Exercise 7")
 
-/* WRITE YOUR CODE HERE */
+let toBeIncreased = [1, 4, 6, 5, "cat", "dog", true, 10]
+
+for (let i = 0; i < toBeIncreased.length; i++) {
+    if(typeof toBeIncreased[i] === "number" )
+    toBeIncreased[i]++
+}
+console.log(toBeIncreased)
 
 /* EXERCISE 8 
 Replace all the strings in an array with their length.
 es.: ["strive", "is", "great"] => [6, 2, 5]
 */
 writeHeader("Extra Exercise 8")
+
+let advert = ["strive", "is", "great"]
+for (let i = 0; i < advert.length; i++) {
+    advert[i] = advert[i].length
+}
+console.log(advert)
 
 /* WRITE YOUR CODE HERE */
 
