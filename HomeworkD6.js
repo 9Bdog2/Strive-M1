@@ -164,7 +164,7 @@ writeHeader(" Exercise 5")
 function onlyLetters(str){
     let x = ""
     for (let i = 0; i < str.length; i++) {
-        if (str[i] === typeof numbers ) { // it does not recognise number
+        if (str[i] === typeof number ) { // it does not recognise number
             continue
         }else{
             x += str[i]
@@ -179,11 +179,21 @@ onlyLetters("I have 4 dogs")
 writeHeader(" Exercise 6")
 
 /* Ex.6 
-   Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
+   Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address. ?
 */
 
+/* function isThisAnEmail(str) {
 
+    let validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  
+    if (str.value.match(validRegex)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
+isThisAnEmail("johnDoe@gmail.com") */
 
 writeHeader(" Exercise 7")
 
@@ -191,8 +201,13 @@ writeHeader(" Exercise 7")
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
 
-
-
+function whatDayIsIt(){
+    let day = new Date();
+    console.log(day)
+    let dayOfTheWeek = day.getDay()
+    console.log(dayOfTheWeek)
+}
+whatDayIsIt()
 
 
 writeHeader(" Exercise 8")
