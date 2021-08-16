@@ -244,12 +244,24 @@ rollTheDices(3) */
 writeHeader(" Exercise 9")
 
 /* Ex.9
-   Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
+   Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date. ?
 */
 
-function howManyDays(){
-    
+function howManyDays(first, second) {
+    // Take the difference between the dates and divide by milliseconds per day.
+    // Round to nearest whole number to deal with DST.
+    return Math.round((second-first)/(1000*60*60*24));
 }
+console.log(howManyDays(1/1/2020, 1/1/2021))
+
+
+
+/* function howManyDays(startDate, endDate) {
+    var millisecondsPerDay = 24 * 60 * 60 * 1000;
+    return (treatAsUTC(endDate) - treatAsUTC(startDate)) / millisecondsPerDay;
+}
+
+console.log(howManyDays((1/1/2020, 1/1/2021))) */
 
 
 writeHeader(" Exercise 10")
@@ -258,134 +270,13 @@ writeHeader(" Exercise 10")
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
 */
 
+function isTodayMyBirthday(boolean){
+
+}
+
+
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of this file!
-writeHeader(" Exercise 11")
-
-/* Ex.11
-   Write a function called "deleteProp" which receives an object and a string as parameters, and returns the given object after deleting its property named as the given string.
-*/
-
-
-
-
-writeHeader(" Exercise 12")
-
-/* Ex.12 
-    Write a function called "olderMovie" which finds the oldest movie in the array provided at the end of this file.
-*/
-
-
-
-
-writeHeader(" Exercise 13")
-
-/* Ex.13
-    Write a function called "countMovies" which returns the number of movies contained in the array provided at the end of this file.
-*/
-
-
-
-
-writeHeader(" Exercise 14")
-
-/* Ex.14
-    Write a function called "onlyTheTitles" which creates an array with just the titles of the movies provided in the array at the end of the file.
-*/
-
-
-
-
-writeHeader(" Exercise 15")
-
-/* Ex.15
-   Write a function called "onlyInThisMillennium" which returns only the movies produced in this millennium.
-*/
-
-
-
-
-writeHeader(" Exercise 16")
-
-/* Ex.16 
-    Write a function called "getMovieById" which receives an id as a parameter and returns the movie with the given id.
-*/
-
-
-
-
-writeHeader(" Exercise 17")
-
-/* Ex.17
-    Write a function called "sumAllTheYears" which returns the sum of all the years in which the movies provided have been produced.
-*/
-
-
-
-
-
-writeHeader(" Exercise 18")
-
-/* Ex.18
-    Write a function called "searchByTitle" which receives a string as a parameter and returns all the movies which contain that string in the title.
-*/
-
-
-
-
-
-
-writeHeader(" Exercise 19")
-
-/* Ex.19
-    Write a function called "searchAndDivide" which receives a string as a parameter and returns an object;
-    this object should contain an array called "match", made by all the movies which contain the given string in the title,
-    and another array "unmatch" with all the remaining ones.
-*/
-
-
-
-
-
-writeHeader(" Exercise 20")
-
-/* Ex.20
-   Write a function called "removeIndex" which receives a number as a parameter and returns the movies array without the element in the given position.
-*/
-
-// [EXTRAS] JS Advanced
-writeHeader(" Exercise 21")
-
-/* Ex.21
-  Create a function called "halfTree" which receives a number as a parameter and builds an "*" half tree with the given height.
-  Example:
-  halfTree(3)
-  *
-  **
-  ***
-*/
-
-
-
-writeHeader(" Exercise 22")
-
-/* Ex.22 
-  Create a function called "tree" which receives a number as a parameter and builds an "*" tree with the given height.
-  Example: 
-  tree(3)
-    *  
-   *** 
-  *****
-*/
-
-
-
-
-writeHeader(" Exercise 23")
-
-/* Ex.23
-  Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
-*/
 
 /* This movies array is used throughout the exercises. Please don't change it :)  */
 const movies = [
@@ -502,3 +393,162 @@ const movies = [
         "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg",
     },
   ]
+
+/* This movies array is used throughout the exercises. Please don't change it :)  */
+
+
+writeHeader(" Exercise 11")
+
+/* Ex.11
+   Write a function called "deleteProp" which receives an object and a string as parameters, and returns the given object after deleting its property named as the given string.
+*/
+
+function deleteProp(object, str){
+
+}
+
+
+writeHeader(" Exercise 12")
+
+/* Ex.12 
+    Write a function called "olderMovie" which finds the oldest movie in the array provided at the end of this file.
+*/
+
+function olderMovie(){
+    for (let i = 0; i < movies.length; i++) {
+        /* if (movies[i].Year > movies[i+1].Year) {
+            let year = parseInt(movies[i].Year)
+        }else{continue} */
+        console.log(movies[i].Year)
+
+    }
+    
+}
+
+olderMovie()
+
+writeHeader(" Exercise 13")
+
+/* Ex.13
+    Write a function called "countMovies" which returns the number of movies contained in the array provided at the end of this file.
+*/
+
+function countMovies(){
+    let x = 1
+    for (let i = 0; i < movies.length; i++) {
+        x++
+    }
+    console.log(`There are ${x} movies in this array`)
+}
+countMovies()
+
+
+writeHeader(" Exercise 14")
+
+/* Ex.14
+    Write a function called "onlyTheTitles" which creates an array with just the titles of the movies provided in the array at the end of the file.
+*/
+
+function onlyTheTitles(){
+    let titles = []
+    for (let i = 0; i < movies.length; i++) {
+        titles.push(movies[i].Title) 
+    }
+    console.log(titles)
+}
+onlyTheTitles()
+
+writeHeader(" Exercise 15")
+
+/* Ex.15
+   Write a function called "onlyInThisMillennium" which returns only the movies produced in this millennium.
+*/
+
+
+
+
+writeHeader(" Exercise 16")
+
+/* Ex.16 
+    Write a function called "getMovieById" which receives an id as a parameter and returns the movie with the given id.
+*/
+
+
+
+
+writeHeader(" Exercise 17")
+
+/* Ex.17
+    Write a function called "sumAllTheYears" which returns the sum of all the years in which the movies provided have been produced.
+*/
+
+
+
+
+
+writeHeader(" Exercise 18")
+
+/* Ex.18
+    Write a function called "searchByTitle" which receives a string as a parameter and returns all the movies which contain that string in the title.
+*/
+
+
+
+
+
+
+writeHeader(" Exercise 19")
+
+/* Ex.19
+    Write a function called "searchAndDivide" which receives a string as a parameter and returns an object;
+    this object should contain an array called "match", made by all the movies which contain the given string in the title,
+    and another array "unmatch" with all the remaining ones.
+*/
+
+
+
+
+
+writeHeader(" Exercise 20")
+
+/* Ex.20
+   Write a function called "removeIndex" which receives a number as a parameter and returns the movies array without the element in the given position.
+*/
+
+// [EXTRAS] JS Advanced
+writeHeader(" Exercise 21")
+
+/* Ex.21
+  Create a function called "halfTree" which receives a number as a parameter and builds an "*" half tree with the given height.
+  Example:
+  halfTree(3)
+  *
+  **
+  ***
+*/
+
+
+
+writeHeader(" Exercise 22")
+
+/* Ex.22 
+  Create a function called "tree" which receives a number as a parameter and builds an "*" tree with the given height.
+  Example: 
+  tree(3)
+    *  
+   *** 
+  *****
+*/
+
+
+
+
+writeHeader(" Exercise 23")
+
+/* Ex.23
+  Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
+*/
+
+
+
+  
