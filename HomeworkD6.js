@@ -461,20 +461,38 @@ onlyTheTitles()
 writeHeader(" Exercise 15")
 
 /* Ex.15
-   Write a function called "onlyInThisMillennium" which returns only the movies produced in this millennium.
+   Write a function called "onlyInThisMillennium" which returns only the movies produced in this millennium.  ?
 */
 
-
-
+function onlyInThisMillennium(){
+    let millennium = []
+    for (let i = 0; i < movies.length; i++) {
+        millennium.push(movies[i].Year) 
+    }
+    for (let i = 0; i < millennium.length; i++) {
+        if (parseInt(millennium[0]) >= 2000 ) {
+            continue
+        }else{
+            
+        }
+        
+    }
+}
+onlyInThisMillennium()
 
 writeHeader(" Exercise 16")
 
 /* Ex.16 
-    Write a function called "getMovieById" which receives an id as a parameter and returns the movie with the given id.
+    Write a function called "getMovieById" which receives an id as a parameter and returns the movie with the given id.    ?
 */
 
-
-
+function getMovieById(id){
+    for (let i = 0; i < movies.length; i++) {
+        movies[i].Id = i
+    }
+    return movies.Id === id
+}
+getMovieById(1)
 
 writeHeader(" Exercise 17")
 
@@ -483,7 +501,9 @@ writeHeader(" Exercise 17")
 */
 
 
+function sumAllTheYears(){
 
+}
 
 
 writeHeader(" Exercise 18")
@@ -493,7 +513,9 @@ writeHeader(" Exercise 18")
 */
 
 
+function searchByTitle(){
 
+}
 
 
 
@@ -506,7 +528,9 @@ writeHeader(" Exercise 19")
 */
 
 
+function searchAndDivide(){
 
+}
 
 
 writeHeader(" Exercise 20")
@@ -514,6 +538,11 @@ writeHeader(" Exercise 20")
 /* Ex.20
    Write a function called "removeIndex" which receives a number as a parameter and returns the movies array without the element in the given position.
 */
+
+function removeIndex(){
+
+}
+
 
 // [EXTRAS] JS Advanced
 writeHeader(" Exercise 21")
@@ -527,7 +556,9 @@ writeHeader(" Exercise 21")
   ***
 */
 
+function halfTree(){
 
+}
 
 writeHeader(" Exercise 22")
 
@@ -540,7 +571,9 @@ writeHeader(" Exercise 22")
   *****
 */
 
+function tree(){
 
+}
 
 
 writeHeader(" Exercise 23")
@@ -549,6 +582,8 @@ writeHeader(" Exercise 23")
   Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
 */
 
-
+function isItPrime(){
+    
+}
 
   
