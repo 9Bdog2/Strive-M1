@@ -13,11 +13,16 @@ const writeHeader = function(title) {
     console.log(`\n\n]>-------------<[ ${title.toUpperCase()} ]>-------------<[`)
   }
 //JS Basics
-writeHeader(" Exercise A")
 
 /* Ex.A
    Create a variable called "test" and assign a string to it.
 */
+writeHeader(" Exercise A")
+
+let variable = "Hello World"
+console.log(variable)
+
+
 writeHeader(" Exercise B")
 
 /* Ex.B
