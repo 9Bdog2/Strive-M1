@@ -106,6 +106,7 @@ writeHeader(" Exercise 7")
 function reverseString(str) {
     return str.split("").reverse("").join("");
   }
+console.log(reverseString("Hello"))
   //const reverseString = (str) => str.split("").reverse("").join("");
 
 /* EXERCISE 8
