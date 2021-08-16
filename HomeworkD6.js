@@ -114,7 +114,7 @@ whoIsBigger(5,4)
 writeHeader(" Exercise 3")
 
 /* Ex.3
-    Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string. 
+    Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string.  ?
     Ex. splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
 
@@ -215,7 +215,7 @@ writeHeader(" Exercise 8")
 /* Ex.8
     Write a function called "rollTheDices" which receives a number as a parameter.
     It should invoke the dice() function defined in Ex1 the specified amount of times,
-    and return an object containing a "sum" property holding the sum of all values extracted
+    and return an object containing a "sum" property holding the sum of all values extracted    ?
     and a "values" array containing the single values of the dicerolls themselves.
     Example: RollTheDices(3) => returns {
         sum: 10
@@ -224,8 +224,22 @@ writeHeader(" Exercise 8")
 */
 
 
-
-
+/* function rollTheDices(number){
+    let values = []
+    let sum = 0
+    let placeHolder
+    for (let i = 0; i < number; i++) {       
+        placeHolder = dice()
+        sum += parseInt(placeHolder)       /// adding to sum 
+        values.push(placeHolder)
+    }
+    console.log(sum)
+    let diceObject = {
+        sum : sum,
+        values : values
+    }
+}
+rollTheDices(3) */
 
 writeHeader(" Exercise 9")
 
@@ -233,7 +247,9 @@ writeHeader(" Exercise 9")
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
 
-
+function howManyDays(){
+    
+}
 
 
 writeHeader(" Exercise 10")
