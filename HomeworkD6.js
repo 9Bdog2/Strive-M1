@@ -114,10 +114,19 @@ whoIsBigger(5,4)
 writeHeader(" Exercise 3")
 
 /* Ex.3
-    Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string.
+    Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string. 
     Ex. splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
 
+function splitMe (str){
+    
+    let x = []
+    for (let i = 0; i < str.length; i++) {
+        x[i] = str[i]  // return words logic ?
+    }
+    console.log(x)
+}
+splitMe("Hello World")
 
 
 writeHeader(" Exercise 4")
@@ -126,16 +135,45 @@ writeHeader(" Exercise 4")
     Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 */
 
+function deleteOne (str, boolean){
+    let x = ""
+    if (boolean === true) {
+        for (let i = 1; i < str.length; i++) {
+            x += str[i]
+        }   
+        console.log(x)
+    }else{
+        for (let i = 0; i < str.length - 1; i++) {
+            x += str[i]
+        }
+        console.log(x)
+    }
+    
+}
+
+deleteOne("Hannibal",false)
 
 
 writeHeader(" Exercise 5")
 
 /* Ex.5
-   Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits.
+   Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits. ?
    Ex.: onlyLetters("I have 4 dogs")  => returns "I have  dogs"
 */
 
+function onlyLetters(str){
+    let x = ""
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === typeof numbers ) { // it does not recognise number
+            continue
+        }else{
+            x += str[i]
+        }
+    }
+    console.log(x)
+}
 
+onlyLetters("I have 4 dogs")
 
 
 writeHeader(" Exercise 6")
