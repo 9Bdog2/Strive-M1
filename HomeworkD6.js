@@ -306,19 +306,53 @@ writeHeader(" Exercise 8")
 }
 rollTheDices(3) */
 
+function rollTheDices(numberOfDices){
+    let result = {
+        sum: 0,
+        values: []
+    }
+
+    for (let i = 0; i < numberOfDices; i ++){
+        let diceRoll = dice()
+        result.sum += diceRoll
+        result.values.push(diceRoll)
+    }
+
+    return result
+}
+rollTheDices(3)
+
 writeHeader(" Exercise 9")
 
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date. ?
 */
 
-function howManyDays(first, second) {
+/* function howManyDays(first, second) {
     // Take the difference between the dates and divide by milliseconds per day.
     // Round to nearest whole number to deal with DST.
     return Math.round((second-first)/(1000*60*60*24));
 }
-console.log(howManyDays(1/1/2020, 1/1/2021))
+console.log(howManyDays(1/1/2020, 1/1/2021)) */
 
+function howManyDays(selectedDate){
+    let today = new Date()
+    let difference = today - selectedDate
+    return difference / (1000 *60 *60 *24)
+}
+
+console.log(Math.floor(howManyDays(01/01/2021)))
+
+
+/* function howManyDays(date){
+    const today = new Date()
+    let difference = today.getTime() - date.getTime()
+      //Lorenzo's Solution
+    difference = ((difference / 1000) / 3600) / 24
+    return Math.floor(difference)    
+}
+const randomDay = new Date("10/02/2020")
+console.log(howManyDays(randomDay)) */
 
 
 /* function howManyDays(startDate, endDate) {
@@ -335,10 +369,15 @@ writeHeader(" Exercise 10")
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
 */
 
-function isTodayMyBirthday(boolean){
-
+function isTodayMyBirthday(){
+    let today = new Date()
+    console.log(today)
+    let bday = new Date(1992, 11, 31) // 30 December, index like arrays
+    console.log(bday) 
+    return (today.getDay() === bday.getDay() && today.getMonth() === bday.getMonth())
 }
 
+console.log(isTodayMyBirthday())
 
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of this file!
@@ -468,10 +507,12 @@ writeHeader(" Exercise 11")
    Write a function called "deleteProp" which receives an object and a string as parameters, and returns the given object after deleting its property named as the given string.
 */
 
-function deleteProp(object, str){
-
+function deleteProp(obj, prop){
+    delete obj[prop]
+    return obj
 }
 
+console.log(deleteProp(movies[0], "Poster"))
 
 writeHeader(" Exercise 12")
 
@@ -479,18 +520,29 @@ writeHeader(" Exercise 12")
     Write a function called "olderMovie" which finds the oldest movie in the array provided at the end of this file.
 */
 
-function olderMovie(){
+/* function olderMovie(){
     for (let i = 0; i < movies.length; i++) {
-        /* if (movies[i].Year > movies[i+1].Year) {
+         if (movies[i].Year > movies[i+1].Year) {
             let year = parseInt(movies[i].Year)
-        }else{continue} */
+        }else{continue} 
         console.log(movies[i].Year)
-
     }
-    
 }
+olderMovie() */
 
+function olderMovie(){
+    let result = { Year: 2100 }
+    for(let i = 0; i < movies.length; i++){
+        let movie = movies[i]
+        let currentYear = parseInt(movie.Year)
+        if (currentYear < result.Year)
+            result = movie
+    }
+    // return result
+    console.log(result)
+}
 olderMovie()
+
 
 writeHeader(" Exercise 13")
 
@@ -498,14 +550,20 @@ writeHeader(" Exercise 13")
     Write a function called "countMovies" which returns the number of movies contained in the array provided at the end of this file.
 */
 
-function countMovies(){
+/* function countMovies(){
     let x = 1
     for (let i = 0; i < movies.length; i++) {
         x++
     }
     console.log(`There are ${x} movies in this array`)
 }
-countMovies()
+countMovies() */
+
+function countMovies(){
+    return movies.length
+}
+
+console.log(countMovies())
 
 
 writeHeader(" Exercise 14")
@@ -529,7 +587,7 @@ writeHeader(" Exercise 15")
    Write a function called "onlyInThisMillennium" which returns only the movies produced in this millennium.  ?
 */
 
-function onlyInThisMillennium(){
+/* function onlyInThisMillennium(){
     let millennium = []
     for (let i = 0; i < movies.length; i++) {
         millennium.push(movies[i].Year) 
@@ -543,7 +601,20 @@ function onlyInThisMillennium(){
         
     }
 }
-onlyInThisMillennium()
+onlyInThisMillennium() */
+
+function onlyInThisMillennium(){
+    let result = []
+    for (let i = 0; i < movies.length; i++) {
+        let movie = movies[i]
+        if (parseInt(movie.Year) >= 2000) {
+            result.push(movie)
+        }
+    }
+    return result
+}
+
+console.log(onlyInThisMillennium())
 
 writeHeader(" Exercise 16")
 
