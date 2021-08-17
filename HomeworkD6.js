@@ -150,7 +150,7 @@ writeHeader(" Exercise 4")
     Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 */
 
-function deleteOne (str, boolean){
+/* function deleteOne (str, boolean){
     let x = ""
     if (boolean === true) {
         for (let i = 1; i < str.length; i++) {
@@ -164,9 +164,26 @@ function deleteOne (str, boolean){
         console.log(x)
     }
     
+} 
+deleteOne("Hannibal",false)
+*/
+
+function deleteOne(str, boolean){
+    placeHolder = ""
+    if (boolean) {
+        return str.substring(1)
+        console.log(str)
+    }else{
+        for (let i = 0; i < str.length - 1; i++) {
+            placeHolder += str[i]
+        }
+        console.log(placeHolder)
+    }
 }
 
-deleteOne("Hannibal",false)
+deleteOne("Hanibal", false)
+
+
 
 
 writeHeader(" Exercise 5")
