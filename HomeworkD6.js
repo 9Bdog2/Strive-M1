@@ -779,10 +779,10 @@ writeHeader(" Exercise 23")
 function isItPrime(number){
     for (let i = 2; i < number; i ++){
         if (number % i === 0)
-            return false
+     console.log(false) 
     }
 
-    return true
+    console.log(true)
 }
 
 
