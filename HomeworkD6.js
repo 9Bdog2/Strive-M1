@@ -622,13 +622,25 @@ writeHeader(" Exercise 16")
     Write a function called "getMovieById" which receives an id as a parameter and returns the movie with the given id.    ?
 */
 
-function getMovieById(id){
+/* function getMovieById(id){
     for (let i = 0; i < movies.length; i++) {
         movies[i].Id = i
     }
     return movies.Id === id
 }
-getMovieById(1)
+getMovieById(1) */
+
+function getMovieById(id){
+    for (let i = 0; i < movies.length; i++) {
+        if(movies[i].imdbID === id){
+           /*  return movies[i] */
+            console.log(movies[i])
+        }
+       /*  return {} */
+    }
+}
+
+getMovieById("tt1731697")
 
 writeHeader(" Exercise 17")
 
@@ -638,9 +650,14 @@ writeHeader(" Exercise 17")
 
 
 function sumAllTheYears(){
-
+    let result = 0
+    for (let i = 0; i < movies.length; i++) {
+        result += parseInt(movies[i].Year)
+    }
+    console.log(result)
 }
 
+sumAllTheYears()
 
 writeHeader(" Exercise 18")
 
@@ -649,9 +666,17 @@ writeHeader(" Exercise 18")
 */
 
 
-function searchByTitle(){
-
+function searchByTitle(keyword){
+    let result = []
+    for (let i = 0; i < movies.length; i++) {
+        if (movies[i].Title.indexOf(keyword) !== -1)
+            result.push(movies[i])
+        
+    }
+    console.log(result)
 }
+
+searchByTitle("Rings")
 
 
 
@@ -664,10 +689,22 @@ writeHeader(" Exercise 19")
 */
 
 
-function searchAndDivide(){
-
+function searchAndDivide(word){
+    let result = {
+        match : [],
+        unmatch : []
+    }
+    for (let i = 0; i < movies.length; i++) {
+        if (movies[i].Title.indexOf(word) !== -1){
+            result.match.push(movies[i])
+        }else{
+            result.unmatch.push(movies[i])
+        }
+    } 
+    console.log(result)      
 }
 
+searchAndDivide("Flies")
 
 writeHeader(" Exercise 20")
 
@@ -675,10 +712,17 @@ writeHeader(" Exercise 20")
    Write a function called "removeIndex" which receives a number as a parameter and returns the movies array without the element in the given position.?
 */
 
-function removeIndex(){
-
+function removeIndex(number){
+    let result = []
+    for (let i = 0; i < movies.length; i++) {
+        if (number === i) {
+            continue
+        }
+        result.push(movies[i])
+    }
 }
 
+console.log(removeIndex(2))
 
 // [EXTRAS] JS Advanced
 writeHeader(" Exercise 21")
