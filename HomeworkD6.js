@@ -193,10 +193,11 @@ writeHeader(" Exercise 5")
    Ex.: onlyLetters("I have 4 dogs")  => returns "I have  dogs"
 */
 
-function onlyLetters(str){
+/* function onlyLetters(str){
     let x = ""
     for (let i = 0; i < str.length; i++) {
-        if (str[i] === typeof number ) { // it does not recognise number
+        currentLetter = str[i]
+        if (!isNaN(currentLetter) ) { // it does not recognise number
             continue
         }else{
             x += str[i]
@@ -205,7 +206,19 @@ function onlyLetters(str){
     console.log(x)
 }
 
-onlyLetters("I have 4 dogs")
+onlyLetters("I have 4 dogs") */
+
+function onlyLetters(str){
+    let result = ""
+    for (let i = 0; i < str.length; i++) {
+        let currentLetter = str[i]
+        if(isNaN(currentLetter)){
+            result += currentLetter
+        }
+    }
+    console.log(result) 
+}
+onlyLetters("I have 4 dogs") 
 
 
 writeHeader(" Exercise 6")
@@ -226,6 +239,16 @@ writeHeader(" Exercise 6")
   }
 
 isThisAnEmail("johnDoe@gmail.com") */
+
+function isThisAnEmail(email){
+    if (email.includes("@") > 0 && email.indexOf(".") > 0) {
+        return true
+    }else{
+        return false
+    }
+}
+
+console.log(isThisAnEmail("johnDoe@gmail.com"))
 
 writeHeader(" Exercise 7")
 
