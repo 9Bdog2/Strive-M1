@@ -262,6 +262,16 @@ function whatDayIsIt(){
     let dayOfTheWeek = day.getDay()
     console.log(dayOfTheWeek)
 }
+
+
+/* function whatDayIsIt(){
+    let days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
+    return days[(new Date()).getDay()]
+    console.log(days)
+} */
+
+
+
 whatDayIsIt()
 
 
