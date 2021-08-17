@@ -112,6 +112,14 @@ function whoIsBigger(x,y){
 }
 whoIsBigger(5,4)
 
+/* function whoIsBigger(x,y){
+    if(x > y){
+        return x
+    }else{
+        return y
+    }
+} */
+
 writeHeader(" Exercise 3")
 
 /* Ex.3
@@ -119,14 +127,20 @@ writeHeader(" Exercise 3")
     Ex. splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
 
-function splitMe (str){
+/* function splitMe (str){
     
     let x = []
     for (let i = 0; i < str.length; i++) {
         x[i] = str[i]  // return words logic ?
     }
     console.log(x)
+} */
+
+function splitMe(str){
+    return str.split(" ")
 }
+console.log(splitMe("Hello World"))
+
 splitMe("Hello World")
 
 
