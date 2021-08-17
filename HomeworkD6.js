@@ -39,6 +39,7 @@ writeHeader(" Exercise C")
 */
 let random = Math.floor(Math.random() * 20)
 console.log(random)
+// let random = Math.random() * 20
 
 writeHeader(" Exercise D")
 
@@ -536,7 +537,7 @@ function searchAndDivide(){
 writeHeader(" Exercise 20")
 
 /* Ex.20
-   Write a function called "removeIndex" which receives a number as a parameter and returns the movies array without the element in the given position.
+   Write a function called "removeIndex" which receives a number as a parameter and returns the movies array without the element in the given position.?
 */
 
 function removeIndex(){
@@ -548,7 +549,7 @@ function removeIndex(){
 writeHeader(" Exercise 21")
 
 /* Ex.21
-  Create a function called "halfTree" which receives a number as a parameter and builds an "*" half tree with the given height.
+  Create a function called "halfTree" which receives a number as a parameter and builds an "*" half tree with the given height.?
   Example:
   halfTree(3)
   *
@@ -563,7 +564,7 @@ function halfTree(){
 writeHeader(" Exercise 22")
 
 /* Ex.22 
-  Create a function called "tree" which receives a number as a parameter and builds an "*" tree with the given height.
+  Create a function called "tree" which receives a number as a parameter and builds an "*" tree with the given height.?
   Example: 
   tree(3)
     *  
@@ -579,7 +580,7 @@ function tree(){
 writeHeader(" Exercise 23")
 
 /* Ex.23
-  Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
+  Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.   ?
 */
 
 function isItPrime(){
