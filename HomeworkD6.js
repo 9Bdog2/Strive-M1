@@ -736,9 +736,18 @@ writeHeader(" Exercise 21")
   ***
 */
 
-function halfTree(){
-
+function halfTree(height){
+    for (let i = 0; i < height; i ++){
+        let toPrint = ""
+        for (let j = 0; j < i + 1; j++) {
+            toPrint += "*"
+        }
+        console.log(toPrint)
+    }
 }
+
+
+halfTree(5)
 
 writeHeader(" Exercise 22")
 
@@ -751,10 +760,15 @@ writeHeader(" Exercise 22")
   *****
 */
 
-function tree(){
-
+function tree(height){
+    for (let i = 0; i < height; i++){
+        let stars = "*".repeat(2 * i +1)
+        let spacesBefore = " ".repeat(height - i - 1)
+        console.log(spacesBefore + stars)
+    }
 }
 
+tree(5)
 
 writeHeader(" Exercise 23")
 
@@ -762,8 +776,15 @@ writeHeader(" Exercise 23")
   Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.   ?
 */
 
-function isItPrime(){
-    
+function isItPrime(number){
+    for (let i = 2; i < number; i ++){
+        if (number % i === 0)
+            return false
+    }
+
+    return true
 }
 
+
+isItPrime(7)
   
