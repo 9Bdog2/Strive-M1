@@ -96,6 +96,9 @@ writeHeader(" Exercise 1")
 function dice(){
     let x = Math.floor(Math.random() * 6)
     console.log(x)
+    return x
+    
+
 }
 
 dice()
@@ -317,10 +320,10 @@ function rollTheDices(numberOfDices){
         result.sum += diceRoll
         result.values.push(diceRoll)
     }
-
+    
     return result
 }
-rollTheDices(3)
+console.log(rollTheDices(3))
 
 writeHeader(" Exercise 9")
 
